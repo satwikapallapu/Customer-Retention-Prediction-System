@@ -1,0 +1,7 @@
+2026-02-04 02:34:28,569 - INFO - ordinal ROC-AUC: 0.8545
+2026-02-04 02:34:29,387 - INFO - target ROC-AUC: 0.8539
+2026-02-04 02:34:29,531 - INFO - binary skipped (column mismatch)
+2026-02-04 02:34:30,523 - INFO - hashing ROC-AUC: 0.8367
+2026-02-04 02:34:30,523 - INFO - Best categorical encoder: ordinal
+2026-02-04 02:34:30,587 - INFO - Final X_train shape: (5634, 21)
+2026-02-04 02:34:30,587 - INFO - Final X_test shape: (1409, 21)

@@ -1,0 +1,176 @@
+2026-02-04 02:33:42,341 - INFO -    customerID  gender  SeniorCitizen Partner Dependents  tenure PhoneService  ...              PaymentMethod MonthlyCharges TotalCharges Churn   SIM  DeviceType     Region
+0  7590-VHVEG  Female              0     Yes         No       1           No  ...           Electronic check          29.85        29.85    No    Vi  Old Device  Sub Urban
+1  5575-GNVDE    Male              0      No         No      34          Yes  ...               Mailed check          56.95      1889.50    No    Vi  New Device  Sub Urban
+2  3668-QPYBK    Male              0      No         No       2          Yes  ...               Mailed check          53.85       108.15   Yes  BSNL  Old Device  Sub Urban
+3  7795-CFOCW    Male              0      No         No      45           No  ...  Bank transfer (automatic)          42.30      1840.75    No    Vi  New Device  Sub Urban
+4  9237-HQITU  Female              0      No         No       2          Yes  ...           Electronic check          70.70       151.65   Yes   Jio  Old Device      Urban
+
+[5 rows x 24 columns]
+2026-02-04 02:33:42,381 - INFO - (7043, 24)
+2026-02-04 02:33:42,381 - INFO - Data loaded successfully
+2026-02-04 02:33:42,396 - INFO - Null values:
+customerID           0
+gender               0
+SeniorCitizen        0
+Partner              0
+Dependents           0
+tenure               0
+PhoneService         0
+MultipleLines        0
+InternetService      0
+OnlineSecurity       0
+OnlineBackup         0
+StreamingMovies      0
+DeviceProtection     0
+TechSupport          0
+StreamingTV          0
+Contract             0
+PaperlessBilling     0
+PaymentMethod        0
+MonthlyCharges       0
+TotalCharges        11
+Churn                0
+SIM                  0
+DeviceType           0
+Region               0
+dtype: int64
+2026-02-04 02:33:42,414 - INFO - X_train_shape: (5634, 22)
+2026-02-04 02:33:42,414 - INFO - X_test_shape: (1409, 22)
+2026-02-04 02:33:42,414 - INFO - y_train_shape: (5634,)
+2026-02-04 02:33:42,414 - INFO - y_test_shape: (1409,)
+2026-02-04 02:33:42,414 - INFO - y_train:2142    0
+1623    0
+6074    1
+1362    1
+6754    0
+Name: Churn, dtype: int64
+2026-02-04 02:33:42,434 - INFO - X_train:      gender  SeniorCitizen Partner Dependents  tenure PhoneService  ...              PaymentMethod MonthlyCharges TotalCharges   SIM  DeviceType     Region
+2142  Female              0      No        Yes      21          Yes  ...               Mailed check          64.85      1336.80  BSNL  New Device  Sub Urban
+1623  Female              0      No         No      54          Yes  ...  Bank transfer (automatic)          97.20      5129.45   Jio  Old Device      Urban
+6074    Male              0     Yes         No       1           No  ...           Electronic check          23.45        23.45  BSNL  Old Device  Sub Urban
+1362    Male              0      No         No       4          Yes  ...           Electronic check          70.20       237.95   Jio  Old Device      Urban
+6754    Male              0      No        Yes       0          Yes  ...  Bank transfer (automatic)          61.90          NaN  BSNL  Old Device  Sub Urban
+
+[5 rows x 22 columns]
+2026-02-04 02:34:23,530 - INFO - Best missing value method detected: knn
+2026-02-04 02:34:23,580 - INFO - X_train:      gender  SeniorCitizen Partner Dependents  tenure PhoneService  ...              PaymentMethod MonthlyCharges TotalCharges   SIM  DeviceType     Region
+86    Female            0.0     Yes         No    35.0          Yes  ...  Bank transfer (automatic)          62.15      2215.45  BSNL  Old Device  Sub Urban
+4962  Female            0.0     Yes        Yes    17.0          Yes  ...               Mailed check          74.55      1215.80  BSNL  Old Device  Sub Urban
+2918    Male            1.0     Yes         No     8.0           No  ...               Mailed check          43.35       371.40  BSNL  New Device  Sub Urban
+826     Male            1.0     Yes         No     7.0          Yes  ...  Bank transfer (automatic)          95.60       644.35   Jio  Old Device      Urban
+483   Female            0.0     Yes         No    72.0          Yes  ...  Bank transfer (automatic)         108.50      8003.80   Jio  New Device      Urban
+5770  Female            0.0     Yes         No    37.0          Yes  ...    Credit card (automatic)          68.10      2479.25    Vi  New Device  Sub Urban
+2094  Female            0.0      No         No    18.0          Yes  ...               Mailed check          19.65       391.70  BSNL  Old Device      Rural
+2209    Male            0.0     Yes         No     8.0          Yes  ...  Bank transfer (automatic)          19.55       161.15  BSNL  Old Device      Rural
+3524  Female            1.0      No         No    11.0          Yes  ...    Credit card (automatic)          84.80       906.85   Jio  Old Device      Urban
+875   Female            0.0      No         No     3.0           No  ...    Credit card (automatic)          34.80       113.95    Vi  Old Device  Sub Urban
+
+[10 rows x 22 columns]
+2026-02-04 02:34:23,580 - INFO - X_train:gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+StreamingMovies     0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+SIM                 0
+DeviceType          0
+Region              0
+dtype: int64
+2026-02-04 02:34:23,596 - INFO - Missing value imputation applied successfully.
+2026-02-04 02:34:27,749 - INFO - X_train:      gender  SeniorCitizen Partner Dependents  tenure PhoneService  ...              PaymentMethod MonthlyCharges TotalCharges     SIM  DeviceType     Region
+3603    Male            0.0      No         No     2.0          Yes  ...               Mailed check          45.85        81.00    BSNL  Old Device  Sub Urban
+1873  Female            0.0     Yes        Yes    72.0          Yes  ...    Credit card (automatic)          70.65      5011.15      Vi  New Device  Sub Urban
+5641    Male            0.0      No        Yes    39.0          Yes  ...  Bank transfer (automatic)          25.45       958.45    BSNL  Old Device      Rural
+5767  Female            0.0     Yes         No    65.0          Yes  ...    Credit card (automatic)          59.80      3808.20      Vi  Old Device  Sub Urban
+5370    Male            0.0     Yes        Yes    16.0          Yes  ...  Bank transfer (automatic)          90.80      1442.20     Jio  New Device      Urban
+5694  Female            0.0     Yes         No    33.0          Yes  ...               Mailed check          51.45      1758.90    BSNL  Old Device  Sub Urban
+1395    Male            0.0     Yes         No    41.0          Yes  ...           Electronic check          73.00      3001.20    BSNL  New Device  Sub Urban
+1141    Male            0.0      No        Yes     6.0          Yes  ...               Mailed check          20.20        98.35    BSNL  Old Device      Rural
+5940    Male            0.0     Yes        Yes    56.0          Yes  ...               Mailed check          85.85      4793.80  Airtel  New Device      Urban
+2236    Male            0.0      No         No     5.0          Yes  ...               Mailed check          71.45       371.60  Airtel  Old Device      Urban
+
+[10 rows x 22 columns]
+2026-02-04 02:34:27,754 - INFO - X_train:gender              0
+SeniorCitizen       0
+Partner             0
+Dependents          0
+tenure              0
+PhoneService        0
+MultipleLines       0
+InternetService     0
+OnlineSecurity      0
+OnlineBackup        0
+StreamingMovies     0
+DeviceProtection    0
+TechSupport         0
+StreamingTV         0
+Contract            0
+PaperlessBilling    0
+PaymentMethod       0
+MonthlyCharges      0
+TotalCharges        0
+SIM                 0
+DeviceType          0
+Region              0
+dtype: int64
+2026-02-04 02:34:27,754 - INFO - Variable transformation (outliers handling) completed.
+2026-02-04 02:34:27,839 - INFO - X_train_shape: (5634, 21)
+2026-02-04 02:34:27,841 - INFO - X_test_shape: (1409, 21)
+2026-02-04 02:34:27,859 - INFO - X_train:      tenure  MonthlyCharges  TotalCharges  gender Partner Dependents  ...        Contract PaperlessBilling              PaymentMethod     SIM  DeviceType     Region
+1901    12.0           20.15        260.70  Female      No         No  ...        One year               No           Electronic check    BSNL  Old Device      Rural
+5385    53.0           85.45       4517.25    Male      No         No  ...  Month-to-month               No  Bank transfer (automatic)     Jio  Old Device      Urban
+6438     1.0           74.40         74.40    Male      No         No  ...  Month-to-month              Yes           Electronic check     Jio  Old Device      Urban
+6591     2.0           69.80        134.70    Male      No         No  ...  Month-to-month              Yes    Credit card (automatic)     Jio  Old Device      Urban
+5179     3.0           69.35        191.35    Male      No         No  ...  Month-to-month              Yes           Electronic check    BSNL  Old Device  Sub Urban
+830     50.0          108.55       5610.70  Female     Yes         No  ...        One year               No           Electronic check  Airtel  Old Device      Urban
+6425    52.0           44.25       2276.10    Male     Yes        Yes  ...        One year               No  Bank transfer (automatic)    BSNL  New Device  Sub Urban
+3291    24.0           55.15       1319.85  Female     Yes        Yes  ...  Month-to-month               No           Electronic check      Vi  Old Device  Sub Urban
+3908    60.0          116.05       6925.90  Female     Yes         No  ...        Two year              Yes  Bank transfer (automatic)  Airtel  New Device      Urban
+3013    29.0           71.00       2080.10  Female      No         No  ...        One year              Yes    Credit card (automatic)    BSNL  Old Device  Sub Urban
+
+[10 rows x 21 columns]
+2026-02-04 02:34:30,587 - INFO - X_train_shape: (5634, 21)
+2026-02-04 02:34:30,602 - INFO - X_test_shape: (1409, 21)
+2026-02-04 02:34:30,604 - INFO - X_train:      tenure  MonthlyCharges  TotalCharges  gender  Partner  Dependents  PhoneService  ...  StreamingTV  Contract  PaperlessBilling  PaymentMethod  SIM  DeviceType  Region
+6080     1.0           29.70         29.70       2        1           2             2  ...            1         3                 1              1    1           2       1
+3004     1.0           89.15         89.15       2        2           1             1  ...            2         3                 1              1    2           2       2
+5160     1.0           74.35         74.35       1        1           2             1  ...            1         3                 1              3    4           2       2
+360      5.0           20.20         83.75       2        1           1             1  ...            3         3                 1              1    1           2       3
+4975    72.0          103.75       7346.20       2        2           2             1  ...            2         2                 2              2    2           1       2
+1461    22.0           95.90       2234.95       2        2           2             1  ...            2         3                 1              4    4           2       2
+5256    52.0           96.25       4990.25       2        2           1             1  ...            1         2                 2              2    2           1       2
+2508    64.0          110.50       7069.25       1        1           2             1  ...            2         2                 2              4    4           1       2
+4304    49.0           19.00        918.70       1        2           2             1  ...            3         1                 1              4    1           2       3
+3713    46.0           80.40       3605.20       2        2           2             1  ...            1         3                 2              3    2           2       2
+
+[10 rows x 21 columns]
+2026-02-04 02:34:30,604 - INFO - Categorical encoding applied successfully
+2026-02-04 02:34:30,619 - INFO - ===== DATA BALANCING COMPLETED =====
+2026-02-04 02:34:30,619 - INFO - Balanced X_train shape: (5634, 21)
+2026-02-04 02:34:30,672 - INFO - Balanced y distribution:
+Churn
+0    4138
+1    1496
+Name: count, dtype: int64
+2026-02-04 02:34:30,672 - INFO - Selecting Best Feature Scaling Technique
+2026-02-04 02:34:30,685 - INFO - Missing values handled using Median Imputation
+2026-02-04 02:34:30,685 - INFO - STANDARD scaler score = 1.9406
+2026-02-04 02:34:30,700 - INFO - MINMAX scaler score = 1.9406
+2026-02-04 02:34:30,715 - INFO - ROBUST scaler score = 1.9406
+2026-02-04 02:34:30,731 - INFO - MAXABS scaler score = 1.9406
+2026-02-04 02:34:30,731 - INFO - BEST SCALER SELECTED = MINMAX
+2026-02-04 02:35:11,918 - INFO - Feature Scaling Completed Successfully
+2026-02-04 02:35:11,918 - INFO - X_train shape after scaling: (5634, 21)

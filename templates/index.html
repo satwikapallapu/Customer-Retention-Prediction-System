@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #e6ffe6; /* soft green background */
+            padding: 30px;
+        }
+
+
+        form {
+            background: white;
+            padding: 25px;
+            width: 700px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 15px;
+        }
+        button {
+            background: #166534; /* dark green */
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        /* SIM curved boxes styles without logos */
+        .sim-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .sim-option {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .sim-option input {
+            display: none;
+        }
+        .sim-option input:checked + span {
+            color: #166534;
+            border-radius: 10px;
+        }
+        .sim-option:hover {
+            border-color: #166534;
+        }
+    </style>
+</head>
+
+<body>
+
+<form method="POST" action="/predict">
+    <h2>Customer Churn Prediction</h2>
+
+    <label>Gender</label>
+    <select name="gender"><option>Male</option><option>Female</option></select>
+
+    <label>Partner</label>
+    <select name="Partner"><option>Yes</option><option>No</option></select>
+
+    <label>Dependents</label>
+    <select name="Dependents"><option>Yes</option><option>No</option></select>
+
+    <label>Phone Service</label>
+    <select name="PhoneService"><option>Yes</option><option>No</option></select>
+
+    <label>Multiple Lines</label>
+    <select name="MultipleLines"><option>Yes</option><option>No</option><option>No phone service</option></select>
+
+    <label>Internet Service</label>
+    <select name="InternetService"><option>DSL</option><option>Fiber optic</option><option>No</option></select>
+
+    <label>Online Security</label>
+    <select name="OnlineSecurity"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Online Backup</label>
+    <select name="OnlineBackup"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Device Protection</label>
+    <select name="DeviceProtection"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Tech Support</label>
+    <select name="TechSupport"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Streaming TV</label>
+    <select name="StreamingTV"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Streaming Movies</label>
+    <select name="StreamingMovies"><option>Yes</option><option>No</option><option>No internet service</option></select>
+
+    <label>Contract</label>
+    <select name="Contract"><option>Month-to-month</option><option>One year</option><option>Two year</option></select>
+
+    <label>Paperless Billing</label>
+    <select name="PaperlessBilling"><option>Yes</option><option>No</option></select>
+
+    <label>Payment Method</label>
+    <select name="PaymentMethod">
+        <option>Electronic check</option>
+        <option>Mailed check</option>
+        <option>Bank transfer (automatic)</option>
+        <option>Credit card (automatic)</option>
+    </select>
+
+    <!-- SIM Curved Boxes without logos -->
+    <label>SIM</label>
+    <div class="sim-container">
+        <label class="sim-option">
+            <input type="radio" name="SIM" value="Jio">
+            <span>Jio</span>
+        </label>
+        <label class="sim-option">
+            <input type="radio" name="SIM" value="Airtel">
+            <span>Airtel</span>
+        </label>
+        <label class="sim-option">
+            <input type="radio" name="SIM" value="Vi">
+            <span>Vi</span>
+        </label>
+        <label class="sim-option">
+            <input type="radio" name="SIM" value="BSNL">
+            <span>BSNL</span>
+        </label>
+    </div>
+
+    <label>Device Type</label>
+    <select name="DeviceType"><option>Old Device</option><option>New Device</option></select>
+
+    <label>Region</label>
+    <select name="Region"><option>Urban</option><option>Sub Urban</option><option>Rural</option></select>
+
+    <label>Tenure</label>
+    <input type="number" name="tenure" required>
+
+    <label>Monthly Charges</label>
+    <input type="number" step="0.01" name="MonthlyCharges" required>
+
+    <label>Total Charges</label>
+    <input type="number" step="0.01" name="TotalCharges" required>
+
+    <button type="submit">Predict Churn</button>
+
+    {% if prediction %}
+        <div class="result">
+            <strong>Prediction:</strong> {{ prediction }} <br>
+            <strong>Probability:</strong> {{ probability }}
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="result" style="color:red;">
+            Error: {{ error }}
+        </div>
+    {% endif %}
+</form>
+
+</body>
+</html>

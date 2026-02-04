@@ -1,0 +1,11 @@
+2026-02-04 02:34:27,756 - INFO - Numerical columns before FS: ['SeniorCitizen', 'tenure', 'MonthlyCharges', 'TotalCharges']
+2026-02-04 02:34:27,758 - INFO - Categorical columns untouched: ['gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'StreamingMovies', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'SIM', 'DeviceType', 'Region']
+2026-02-04 02:34:27,760 - INFO - Constant features removed: ['SeniorCitizen']
+2026-02-04 02:34:27,762 - INFO - Quasi-constant features removed: []
+2026-02-04 02:34:27,827 - INFO - Features kept after Chi-Square: ['tenure', 'MonthlyCharges', 'TotalCharges']
+2026-02-04 02:34:27,835 - INFO - tenure | p-value = 0.000000
+2026-02-04 02:34:27,837 - INFO - MonthlyCharges | p-value = 0.000000
+2026-02-04 02:34:27,837 - INFO - TotalCharges | p-value = 0.000000
+2026-02-04 02:34:27,837 - INFO - Features removed by Pearson test: []
+2026-02-04 02:34:27,839 - INFO - Final features after FS: ['tenure', 'MonthlyCharges', 'TotalCharges', 'gender', 'Partner', 'Dependents', 'PhoneService', 'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup', 'StreamingMovies', 'DeviceProtection', 'TechSupport', 'StreamingTV', 'Contract', 'PaperlessBilling', 'PaymentMethod', 'SIM', 'DeviceType', 'Region']
+2026-02-04 02:34:27,839 - INFO - Final shape: (5634, 21)
