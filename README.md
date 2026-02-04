@@ -179,6 +179,4 @@ The solution provides actionable insights that can significantly improve custome
 
 ---
 
-## ⭐ If you like this project
 
-Give it a star ⭐ and feel free to fork or contribute!
